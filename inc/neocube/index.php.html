@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NeoCube</title>
+
+<!-- Installation de jQuery -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="./js/jquery.scripts.js"></script>
+
+<!-- Installation de Fancybox -->
+<script type="text/javascript" src="./js/fancybox/jquery.mousewheel-3.0.2.pack.js"></script>
+<script type="text/javascript" src="./js/fancybox/jquery.fancybox-1.3.1.js"></script>
+<script type="text/javascript" src="./js/fancybox/jquery.easing-1.3.pack.js"></script>
+
+<link rel="stylesheet" type="text/css" href="././js/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+
+
+<!-- Installation de TN3 Gallery -->
+<script type="text/javascript" src="./js/jquery.tn3lite.min.js"></script>
+<link type="text/css" rel="stylesheet" href="./skins/tn3/tn3.css"></link>
+
+<!-- Installation de SWF Object -->
+<script type="text/javascript" src="./js/jquery.flash.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(
+	function() {
+		$('#headerFlash').flash('header.swf');
+	}
+
+);
+</script>
+
+<script type="text/javascript">
+
+	// Lance la gallerie TN3
+	
+	$(document).ready(function() {
+		//Thumbnailer.config.shaderOpacity = 1;
+		var tn1 = $('.mygallery').tn3({
+		skinDir:"skins",
+		imageClick:"fullscreen",
+		image:{
+		maxZoom:1.5,
+		crop:true,
+		clickEvent:"dblclick",
+		transitions:[{
+		type:"blinds"
+		},{
+		type:"grid"
+		},{
+		type:"grid",
+		duration:460,
+		easing:"easeInQuad",
+		gridX:1,
+		gridY:8,
+		// flat, diagonal, circle, random
+		sort:"random",
+		sortReverse:false,
+		diagonalStart:"bl",
+		// fade, scale
+		method:"scale",
+		partDuration:360,
+		partEasing:"easeOutSine",
+		partDirection:"left"
+		}]
+		}
+		});
+	});
+</script>
+
+<!-- CSS  *****************************************************************************-->
+
+<script type="text/javascript">
+
+	if (screen.width>1024){
+
+  		document.write('<link type="text/css" rel="stylesheet" media="screen" href="./css/styles.css"/>');
+
+  	} else {
+  		document.write('<link type="text/css" rel="stylesheet" media="screen" href="./css/styles1024.css"/>');
+ 	}
+
+</script>
+
+<!-- CSS  *****************************************************************************-->
+
+</head>
+
+<body lang="fr">
+ <div id="general">
+	<div id="header">
+		<div id="title">
+				<a href="./index.php.html"></a>
+				<div id="headerFlash">
+				
+				</div>
+		</div>
+		<div id="login">
+			<form action="#" method="post">
+			    <fieldset>
+			         <input type="text" name="username" class="inputLogin" value="username" onfocus="javascript:this.value=''" /><br />
+			         <input type="text" name="password" class="inputLogin"  value="password" onfocus="javascript:this.value='';this.type='password'" />
+			         <input type="submit" name="envoyer" value="Login" class="btn" id="enter" />
+				</fieldset>
+			</form>
+			<a id="oubli" href="./#password">J'ai oublié mon mot de passe</a>
+			<a id="inscriptionLink" href="./#inscription">Inscription</a>
+		</div>
+	</div>
+		<div id="content">
+		<a id="goGalerie" href="./galerie.php.html"></a>
+		<div id="infos">
+			<iframe id="vimeo" src="http://player.vimeo.com/video/25361332?title=0&amp;byline=0&amp;portrait=0&amp;color=b7ff00" width="638" height="359" style="float: left;" frameborder="0"></iframe>
+			<div>
+				<p>
+				<strong>Le NeoCube, c'est le puzzle du futur : une nouvelle façon de s'amuser et de créer !</strong>
+				</p><br />
+				<p>
+				Composé de 216 billes hautement magnétiques, le Neocube va te permettre de créer un nombre incroyable de figures originales et acrobatiques. Du challenge personnels aux défis entres amis, tu va pouvoir créer toi même des millions de formes différentes. De quoi t'occuper des heures, des jours, des mois, des années, des siècles, des millénaires... bref, longtemps ! 
+				</p>
+			</div>
+		</div>
+		<div id="vente">
+			<div id="abo">
+				Sois le premier à être averti de sa vente :
+				<div>
+					<a href="./#" id="twitter"></a>
+					<a href="./#" id="facebook"></a>
+					<a href="./#" id="rss"></a>
+					<a href="./#" id="sms"></a>
+					<a href="./#" id="push"></a>
+				</div>
+			</div>
+			<div id="qoqa">
+				<div id="annonce">
+					Pas de NeoCube... patiente, il sera bientôt en vente sur :
+				</div>
+				<div>
+					<div id="voyant" class="stop">
+					</div>
+					<a href="./http://www.qoqa.ch" id="qoqaLink">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="communaute">
+			Rejoins la communauté :
+			<div>
+				<a href="./http://www.facebook.com/pages/NeoCube/134344243309593" id="communauteFacebook" class="communauteFacebookOff">
+				</a>
+				<img src="images/bird.png" alt="oiseau de twitter" />
+				<a href="./https://twitter.com/#!/neocubemagnets" id="communauteTwitter" class="communauteTwitterOff">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<address>
+			<a href="./http://www.qoqa.ch">QoQa</a> Services Sàrl | rue de l'Arc-en-ciel 14 | 1030 Bussigny | designed by <a href="./http://www.yago-art.ch">Yago</a>
+		</address>
+	</div>
+	<div style="display: none;">
+		<div id="password">
+			<form action="#" method="post">
+			    <fieldset>
+			         <input type="text" name="username"  value="votre adresse E-mail" onfocus="javascript:this.value=''" /><br />
+			         <input type="submit" name="envoyer" value="Renvoyer le mot de passe" class="btn" id="renvoyer" />
+				</fieldset>
+			</form>
+		</div>
+		<div id="inscription">
+			<form action="#" method="post">
+			    <fieldset>
+			    	 <p>
+			    	 	Formulaire d'inscription
+			    	 </p>
+			    	 <input id="pseudo" type="text" name="username"  value="Pseudonyme" onfocus="javascript:this.value=''" /><br />
+			    	 <input type="text" name="pass"  value="Votre mot de passe" onfocus="javascript:this.value='';this.type='password'" /><br />
+			    	 <input type="text" name="pass"  value="Confirmer mot de passe" onfocus="javascript:this.value='';this.type='password'" /><br />
+			         <input class="mail" type="text" name="mail"  value="Votre E-mail" onfocus="javascript:this.value=''" /><br />
+			         <input class="mail" type="text" name="mail"  value="Confirmer E-mail" onfocus="javascript:this.value=''" /><br />
+			         <input type="submit" name="envoyer" value="M'inscrire"  class="btn" id="envoyerInscritpion" />
+				</fieldset>
+			</form>
+			<div id="laser">
+				<img src="images/laser.png" alt="Canon, créateur de NeoCube." />
+			</div>
+		</div>
+		<div id="soumetWindow">
+			<form action="#" method="post">
+			    <fieldset>
+			    	 <p>
+			    	 	Soumettre une création
+			    	 </p>
+			    	 <input id="pseudoSoumet" type="text" name="username"  value="username" onfocus="javascript:this.value=''" /><br />
+			    	 <input type="text" name="username"  value="password" id="passwordSoumet" onfocus="javascript:this.value='';this.type='password'" /><br />
+			         <input  type="text" name="address"  value="emplacement de l'image" id="emplacement" onfocus="javascript:this.value=''" /><br />
+			         <input type="submit" name="envoyer" value="chercher"  class="btn" id="chercherImage" />
+			         <input type="submit" name="envoyer" value="Soumettre"  class="btn" id="envoyerImage" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

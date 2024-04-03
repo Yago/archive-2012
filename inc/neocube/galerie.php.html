@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NeoCube</title>
+
+<!-- Installation de jQuery -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="./js/jquery.scripts.js"></script>
+
+<!-- Installation de Fancybox -->
+<script type="text/javascript" src="./js/fancybox/jquery.mousewheel-3.0.2.pack.js"></script>
+<script type="text/javascript" src="./js/fancybox/jquery.fancybox-1.3.1.js"></script>
+<script type="text/javascript" src="./js/fancybox/jquery.easing-1.3.pack.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./js/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+
+
+<!-- Installation de TN3 Gallery -->
+<script type="text/javascript" src="./js/jquery.tn3lite.min.js"></script>
+<link type="text/css" rel="stylesheet" href="skins/tn3/tn3.css"></link>
+
+<!-- Installation de SWF Object -->
+<script type="text/javascript" src="./js/jquery.flash.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(
+	function() {
+		$('#headerFlash').flash('header.swf');
+	}
+
+);
+</script>
+
+<script type="text/javascript">
+
+	// Lance la gallerie TN3
+	
+	$(document).ready(function() {
+		//Thumbnailer.config.shaderOpacity = 1;
+		var tn1 = $('.mygallery').tn3({
+		skinDir:"skins",
+		imageClick:"fullscreen",
+		image:{
+		maxZoom:1.5,
+		crop:true,
+		clickEvent:"dblclick",
+		transitions:[{
+		type:"blinds"
+		},{
+		type:"grid"
+		},{
+		type:"grid",
+		duration:460,
+		easing:"easeInQuad",
+		gridX:1,
+		gridY:8,
+		// flat, diagonal, circle, random
+		sort:"random",
+		sortReverse:false,
+		diagonalStart:"bl",
+		// fade, scale
+		method:"scale",
+		partDuration:360,
+		partEasing:"easeOutSine",
+		partDirection:"left"
+		}]
+		}
+		});
+	});
+</script>
+
+<!-- CSS  *****************************************************************************-->
+
+<script type="text/javascript">
+
+	if (screen.width>1024){
+
+  		document.write('<link type="text/css" rel="stylesheet" media="screen" href="./css/styles.css"/>');
+
+  	} else {
+  		document.write('<link type="text/css" rel="stylesheet" media="screen" href="./css/styles1024.css"/>');
+ 	}
+
+</script>
+
+<!-- CSS  *****************************************************************************-->
+
+</head>
+
+<body lang="fr">
+ <div id="general">
+	<div id="header">
+		<div id="title">
+				<a href="index.php.html"></a>
+				<div id="headerFlash">
+				
+				</div>
+		</div>
+		<div id="login">
+			<form action="#" method="post">
+			    <fieldset>
+			         <input type="text" name="username" class="inputLogin" value="username" onfocus="javascript:this.value=''" /><br />
+			         <input type="text" name="password" class="inputLogin"  value="password" onfocus="javascript:this.value='';this.type='password'" />
+			         <input type="submit" name="envoyer" value="Login" class="btn" id="enter" />
+				</fieldset>
+			</form>
+			<a id="oubli" href="#password">J'ai oublié mon mot de passe</a>
+			<a id="inscriptionLink" href="#inscription">Inscription</a>
+		</div>
+	</div>
+		<div id="content">
+		<a id="goAccueil" href="index.php.html"></a>
+		<div id="gallery">
+			<div class="mygallery">
+				<div class="tn3 album">
+				    <h4>Fixed Dimensions</h4>
+				    <div class="tn3 description">Images with fixed dimensions</div>
+				    <div class="tn3 thumb">images/35x35/1.jpg</div>
+				    <ol>
+				    <li>
+				        <h4>Emotion bleue</h4>
+				        <div class="tn3 description">JeVeuxNickerMesHautsParleurs734<div class="number">445456 votes</div><div class="rating1"></div></div>
+				        <a href="images/620x378/8.jpg">
+				    	<img src="images/35x35/8.jpg" />
+				        </a>
+				    </li>
+					<li>
+					    <h4>Atomicus</h4>
+					    <div class="tn3 description">John48<div class="number">35469 votes</div><div class="rating1"></div></div>
+					    <a href="images/620x378/1.jpg">
+						<img src="images/35x35/1.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Joyaux</h4>
+					    <div class="tn3 description">PinkPanther30482<div class="number">255 votes</div><div class="rating2"></div></div>
+					    <a href="images/620x378/2.jpg">
+						<img src="images/35x35/2.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Flocon de neige</h4>
+					    <div class="tn3 description">JustinBieder4Ever<div class="number">1025963 votes</div><div class="rating3"></div></div>
+					    <a href="images/620x378/3.jpg">
+						<img src="images/35x35/3.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>DiscoParty</h4>
+					    <div class="tn3 description">ElvisIsAlive234<div class="number">5 votes</div><div class="rating4"></div></div>
+					    <a href="images/620x378/4.jpg">
+						<img src="images/35x35/4.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Snow Ball</h4>
+					    <div class="tn3 description">SuperBG01<div class="number">1 vote</div><div class="rating5"></div></div>
+					    <a href="images/620x378/5.jpg">
+						<img src="images/35x35/5.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Pentaminion</h4>
+					    <div class="tn3 description">Erasme65<div class="number">5469 votes</div><div class="rating3"></div></div>
+					    <a href="images/620x378/6.jpg">
+						<img src="images/35x35/6.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Dodecacool</h4>
+					    <div class="tn3 description">LittleBeauty0946<div class="number">4423 votes</div><div class="rating4"></div></div>
+					    <a href="images/620x378/7.jpg">
+						<img src="images/35x35/7.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>H20</h4>
+					    <div class="tn3 description">NulEnChimie9545<div class="number">7865 votes</div><div class="rating3"></div></div>
+					    <a href="images/620x378/9.jpg">
+						<img src="images/35x35/9.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Gugenheim</h4>
+					    <div class="tn3 description">Andy<div class="number">578 votes</div><div class="rating2"></div></div>
+					    <a href="images/620x378/10.jpg">
+						<img src="images/35x35/10.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Green Sensation</h4>
+					    <div class="tn3 description">GreenLantern23<div class="number">46785 votes</div><div class="rating5"></div></div>
+					    <a href="images/620x378/11.jpg">
+						<img src="images/35x35/11.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>La chaise</h4>
+					    <div class="tn3 description">GotteronEnForce38<div class="number">7569 votes</div><div class="rating3"></div></div>
+					    <a href="images/620x378/12.jpg">
+						<img src="images/35x35/12.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Triangle</h4>
+					    <div class="tn3 description">ioefnaslkjc234<div class="number">56 votes</div><div class="rating3"></div></div>
+					    <a href="images/620x378/13.jpg">
+						<img src="images/35x35/13.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>De l'eau pour tous</h4>
+					    <div class="tn3 description">AmourEtRespet<div class="number">786 votes</div><div class="rating2"></div></div>
+					    <a href="images/620x378/14.jpg">
+						<img src="images/35x35/14.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Star</h4>
+					    <div class="tn3 description">HollywoodFan04<div class="number">76755637 votes</div><div class="rating1"></div></div>
+					    <a href="images/620x378/15.jpg">
+						<img src="images/35x35/15.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Carre magique</h4>
+					    <div class="tn3 description">Esher<div class="number">4353337 votes</div><div class="rating1"></div></div>
+					    <a href="images/620x378/16.jpg">
+						<img src="images/35x35/16.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Le building</h4>
+					    <div class="tn3 description">FarmerBoy3<div class="number">735123 votes</div><div class="rating2"></div></div>
+					    <a href="images/620x378/20.jpg">
+						<img src="images/35x35/20.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Crazy Frog</h4>
+					    <div class="tn3 description">GreenLanternAgain<div class="number">786763 votes</div><div class="rating3"></div></div>
+					    <a href="images/620x378/18.jpg">
+						<img src="images/35x35/18.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Elephant</h4>
+					    <div class="tn3 description">Simba<div class="number">54321 votes</div><div class="rating5"></div></div>
+					    <a href="images/620x378/19.jpg">
+						<img src="images/35x35/19.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>R2D2</h4>
+					    <div class="tn3 description">StarWars4Ever007<div class="number">786 votes</div><div class="rating5"></div></div>
+					    <a href="images/620x378/20.jpg">
+						<img src="images/35x35/20.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Zebra</h4>
+					    <div class="tn3 description">TropMegaLOL231234<div class="number">76 votes</div><div class="rating1"></div></div>
+					    <a href="images/620x378/21.jpg">
+						<img src="images/35x35/21.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Equilibrium</h4>
+					    <div class="tn3 description">ZackTheKing<div class="number">3423 votes</div><div class="rating1"></div></div>
+					    <a href="images/620x378/22.jpg">
+						<img src="images/35x35/22.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Flower Power</h4>
+					    <div class="tn3 description">Neocube01287<div class="number">786 votes</div><div class="rating4"></div></div>
+					    <a href="images/620x378/23.jpg">
+						<img src="images/35x35/23.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Lampe Bauhaus</h4>
+					    <div class="tn3 description">Bauhaus967<div class="number">1237 votes</div><div class="rating3"></div></div>
+					    <a href="images/620x378/24.jpg">
+						<img src="images/35x35/24.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>NeoCube</h4>
+					    <div class="tn3 description">WaaaawLeTitreDeFou<div class="number">2 votes</div><div class="rating2"></div></div>
+					    <a href="images/620x378/25.jpg">
+						<img src="images/35x35/25.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Magic ball</h4>
+					    <div class="tn3 description">VoyantLAvenir5<div class="number">2348 votes</div><div class="rating4"></div></div>
+					    <a href="images/620x378/26.jpg">
+						<img src="images/35x35/26.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Base</h4>
+					    <div class="tn3 description">O_o<div class="number">123 votes</div><div class="rating4"></div></div>
+					    <a href="images/620x378/27.jpg">
+						<img src="images/35x35/27.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Homme</h4>
+					    <div class="tn3 description">-_o<div class="number">6453 votes</div><div class="rating5"></div></div>
+					    <a href="images/620x378/28.jpg">
+						<img src="images/35x35/28.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Bitriangle</h4>
+					    <div class="tn3 description">^-^<div class="number">87634210 votes</div><div class="rating1"></div></div>
+					    <a href="images/620x378/29.jpg">
+						<img src="images/35x35/29.jpg" />
+					    </a>
+					</li>
+					<li>
+					    <h4>Niche</h4>
+					    <div class="tn3 description">-_;<div class="number">5453044 votes</div><div class="rating3"></div></div>
+					    <a href="images/620x378/30.jpg">
+						<img src="images/35x35/30.jpg" />
+					    </a>
+					</li>
+				    </ol>
+				</div>
+			    </div>
+		</div>
+		<div id="galeriePlus">
+			<div id="uploader">
+				<p>Envois tes créations :</p>
+				<a href="#soumetWindow" id="soumet">Soumettre</a>
+				
+				<em>Les meilleurs votes gagneront des places VIP pour des soirées au Romandie de Lausanne et à la Case à Choc de Neuchâtel !</em>
+			</div>
+			<div id="et">
+				et
+			</div>
+			<div id="aboCreations">
+				Tiens toi au courant des nouveaux ajouts :
+				<div>
+					<a href="#" id="facebook"></a>
+					<a href="#" id="rss"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<address>
+			<a href="http://www.qoqa.ch">QoQa</a> Services Sàrl | rue de l'Arc-en-ciel 14 | 1030 Bussigny | designed by <a href="http://www.yago-art.ch">Yago</a>
+		</address>
+	</div>
+	<div style="display: none;">
+		<div id="password">
+			<form action="#" method="post">
+			    <fieldset>
+			         <input type="text" name="username"  value="votre adresse E-mail" onfocus="javascript:this.value=''" /><br />
+			         <input type="submit" name="envoyer" value="Renvoyer le mot de passe" class="btn" id="renvoyer" />
+				</fieldset>
+			</form>
+		</div>
+		<div id="inscription">
+			<form action="#" method="post">
+			    <fieldset>
+			    	 <p>
+			    	 	Formulaire d'inscription
+			    	 </p>
+			    	 <input id="pseudo" type="text" name="username"  value="Pseudonyme" onfocus="javascript:this.value=''" /><br />
+			    	 <input type="text" name="pass"  value="Votre mot de passe" onfocus="javascript:this.value='';this.type='password'" /><br />
+			    	 <input type="text" name="pass"  value="Confirmer mot de passe" onfocus="javascript:this.value='';this.type='password'" /><br />
+			         <input class="mail" type="text" name="mail"  value="Votre E-mail" onfocus="javascript:this.value=''" /><br />
+			         <input class="mail" type="text" name="mail"  value="Confirmer E-mail" onfocus="javascript:this.value=''" /><br />
+			         <input type="submit" name="envoyer" value="M'inscrire"  class="btn" id="envoyerInscritpion" />
+				</fieldset>
+			</form>
+			<div id="laser">
+				<img src="images/laser.png" alt="Canon, créateur de NeoCube." />
+			</div>
+		</div>
+		<div id="soumetWindow">
+			<form action="#" method="post">
+			    <fieldset>
+			    	 <p>
+			    	 	Soumettre une création
+			    	 </p>
+			    	 <input id="pseudoSoumet" type="text" name="username"  value="username" onfocus="javascript:this.value=''" /><br />
+			    	 <input type="text" name="username"  value="password" id="passwordSoumet" onfocus="javascript:this.value='';this.type='password'" /><br />
+			         <input  type="text" name="address"  value="emplacement de l'image" id="emplacement" onfocus="javascript:this.value=''" /><br />
+			         <input type="submit" name="envoyer" value="chercher"  class="btn" id="chercherImage" />
+			         <input type="submit" name="envoyer" value="Soumettre"  class="btn" id="envoyerImage" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

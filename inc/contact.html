@@ -1,0 +1,30 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div id="formulaire">
+	<h3>
+		FORMULAIRE DE CONTACT
+	</h3>
+	<form action="/inc/php/sendForm.php" method="post" id="formulaireContact">
+    	<fieldset class="donnees">
+           	<input type="text" name="nom" id="nom" value="Nom" onfocus="javascript:this.value=''" /><br />
+           	<input type="text" name="prenom" id="prenom" value="Prénom" onfocus="javascript:this.value=''" /><br />
+           	<input type="text" name="email" id="email" value="E-mail" onfocus="javascript:this.value=''" /><br />
+           	<textarea name="remarque" rows="8" cols="50" onfocus="javascript:this.value=''">
+Votre message ...
+           	</textarea>
+    	</fieldset>
+    	<fieldset id="bouton">
+           	<input type="submit" name="envoyer" value="Envoyer" id="envoyer" />
+    	</fieldset>
+		</form>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {  
+	
+		$("#bouton input").click(function() { 
+			alert("Merci d'avoir pris contact avec moi. Je tâcherai de vous répondre dans les plus brefs délais.");
+		});
+			  	
+	});
+</script>
